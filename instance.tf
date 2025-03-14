@@ -19,8 +19,8 @@ resource "aws_key_pair" "key_pair" {
 resource "aws_instance" "first_instance" {
   ami              = "ami-08b5b3a93ed654d19"              
   instance_type    = "t2.micro"             
-  subnet_id        = subnet-0e61d6ec93aeba6bd
-  security_group_ids = [sg-0c65cc2cc8cc7ffcb]
+  subnet_id        = "subnet-0e61d6ec93aeba6bd"
+  security_group_ids = ["sg-0c65cc2cc8cc7ffcb"]
   key_name         = aws_key_pair.key_pair.key_name
 
   associate_public_ip_address = true
