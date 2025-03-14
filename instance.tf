@@ -2,6 +2,7 @@ provider "aws" {
   region = "us-east-1"
 }
 
+
 # Generate a new private key
 resource "tls_private_key" "key_pair" {
   algorithm = "RSA"
