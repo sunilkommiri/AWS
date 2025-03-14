@@ -16,10 +16,10 @@ resource "aws_key_pair" "key_pair" {
 
 # Launch EC2 instance with the generated key pair
 resource "aws_instance" "first_instance" {
-  ami              = "ami-053a45fff0a704a47"              
+  ami              = "ami-08b5b3a93ed654d19"              
   instance_type    = "t2.micro"             
-  subnet_id        = subnet-0a9fe353bae39dcdd
-  security_group_ids = [sg-036fde0666365f363]
+  subnet_id        = subnet-0e61d6ec93aeba6bd
+  security_group_ids = [sg-0c65cc2cc8cc7ffcb]
   key_name         = aws_key_pair.key_pair.key_name
 
   associate_public_ip_address = true
